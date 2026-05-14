@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 name: Aprendiendo GitHub Actions
-run-name: Estoy Aprendiendo GitHub Actions
+run-name: Triggers - Estoy Aprendiendo GitHub Actions
 
 # Controls when the workflow will run
 on:
@@ -13,8 +13,8 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   # other trigger
-	schedule:
-		- cron : '30 5,17 * * *'
+  schedule:
+  - cron : '30 5,17 * * *'
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
