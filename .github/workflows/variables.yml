@@ -1,6 +1,7 @@
 name: Saludo usando variables
+run-name: Saludo usando variables
 on:
-  workflow_dispatch:
+  push:
 
 env:
   DIA_DE_LA_SEMANA: Lunes 
@@ -10,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SALUDO: Hola
+      NOMBRE: ${{ github.actor }}" 
     steps:
     - name: Echo de saludo y nombre
       run: echo "${{ env.SALUDO }} ${{ env.NOMBRE }}, hoy es $DIA_DE_LA_SEMANA"
